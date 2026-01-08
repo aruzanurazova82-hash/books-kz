@@ -16,17 +16,15 @@ const books = [
   }
 ];
 
-const bookList = document.getElementById("book-list");
+const container = document.getElementById("book-list");
 
 books.forEach(book => {
   const div = document.createElement("div");
   div.className = "book";
-
   div.innerHTML = `
     <h3>${book.title}</h3>
     <p><strong>Автор:</strong> ${book.author}</p>
     <p>${book.description}</p>
   `;
-
-  bookList.appendChild(div);
+  container.appendChild(div);
 });
